@@ -2,14 +2,14 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose'
 
-import { ShopsModule } from './shops/shops.module';
+import { ShopModule } from './shop/shop.module';
 import { OwnerModule } from './owner/owner.module';
 
 const environment = process.env.NODE_ENV || 'development';
 
 @Module({
   imports: [
-    ShopsModule, 
+    ShopModule, 
     OwnerModule,
 
     ConfigModule.forRoot({
